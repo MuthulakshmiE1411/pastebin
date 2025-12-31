@@ -1,0 +1,170 @@
+/* ---------- Global ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Main Card ---------- */
+.container {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Headings ---------- */
+h1 {
+  text-align: center;
+  margin: 0 0 30px 0;
+  font-weight: 600;
+  color: #333;
+  font-size: 28px;
+}
+
+/* ---------- Inputs ---------- */
+.input-group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 2px solid #e1e5e9;
+  background: white;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Floating labels */
+.input-group label {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  color: #999;
+  font-size: 15px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: white;
+  padding: 0 6px;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 16px;
+  font-size: 12px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+/* ---------- Button ---------- */
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ---------- Result Box ---------- */
+.result {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e8f5e9, #f3e5f5);
+  border: 1px solid #c8e6c9;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result p {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: #2e7d32;
+  font-size: 16px;
+}
+
+.result a {
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: 500;
+  word-break: break-all;
+  display: block;
+  padding: 8px 12px;
+  background: rgba(21, 101, 192, 0.1);
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.result a:hover {
+  background: rgba(21, 101, 192, 0.2);
+}

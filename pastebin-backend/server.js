@@ -68,7 +68,7 @@ app.post("/api/pastes", async (req, res) => {
     () => {
       res.status(201).json({
         id,
-        url: `http://localhost:${PORT}/p/${id}`
+        url: `https://pastebin-render.onrender.com/p/${id}`
       });
     }
   );

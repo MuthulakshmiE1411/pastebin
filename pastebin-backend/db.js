@@ -4,7 +4,8 @@ const db = mysql.createConnection({
   host: "kafka-18ffaf00-muthulakshmie49637-c2ca.d.aivencloud.com",
   user: "avnadmin",
   password: "AVNS_5Sxgtx7uOo0Awf9Udvr",
-  database: "pastebin_lite"
+  database: "pastebin_lite",
+  port:22973
 });
 
 db.connect(err => {
